@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://endofcomputation.xyz/sitemap.xml
