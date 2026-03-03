@@ -60,7 +60,6 @@ function TorusCanvas() {
                 if (radius > Math.min(cx, cy) * 1.2) break;
                 const x = cx + radius * Math.cos(angle - t * 0.05);
                 const y = cy + radius * Math.sin(angle - t * 0.05) * 0.5;
-                const alpha = (i / spiralPoints) * 0.25;
                 if (i === 0) {
                     ctx.moveTo(x, y);
                 } else {

@@ -1,5 +1,4 @@
-'use client';
-import React, { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 
 interface StarsCanvasProps {
   transparent?: boolean;       // Background transparency
@@ -23,7 +22,7 @@ export function StarsCanvas({
   paused = false,
 }: StarsCanvasProps) {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
-  const animationRef = useRef<number>();
+  const animationRef = useRef<number>(0);
 
   useEffect(() => {
     const canvas = canvasRef.current;

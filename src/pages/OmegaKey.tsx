@@ -110,7 +110,7 @@ function GlitchText({ text }: { text: string }) {
             frame++;
             if (frame % 60 < 3) {
                 setGlitched(
-                    text.split('').map((c, i) =>
+                    text.split('').map((c, _i) =>
                         Math.random() < 0.15 ? glitchChars[Math.floor(Math.random() * glitchChars.length)] : c
                     ).join('')
                 );

@@ -1,4 +1,3 @@
-import React from 'react';
 import './tesseract.css';
 
 export function Tesseract() {
