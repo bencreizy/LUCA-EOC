@@ -8,6 +8,23 @@
     overflow: visible;
 }
 
+/* Responsive scene sizing */
+@media (max-width: 768px) {
+    .scene {
+        width: 320px;
+        height: 320px;
+        perspective: 600px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .scene {
+        width: 450px;
+        height: 450px;
+        perspective: 800px;
+    }
+}
+
 .tesseract {
     position: relative;
     width: 0;
@@ -183,37 +200,45 @@
     }
 }
 
-/* Hover Effects */
-.core:hover .ring {
+/* Hover Effects - also support touch via active state on mobile */
+.core:hover .ring,
+.core:active .ring {
     animation: sphere-pulse 1.5s infinite alternate ease-in-out;
 }
 
 /* Stagger animations for complexity */
-.core:hover .ring-x {
+.core:hover .ring-x,
+.core:active .ring-x {
     animation-delay: 0s;
 }
 
-.core:hover .ring-y {
+.core:hover .ring-y,
+.core:active .ring-y {
     animation-delay: 0.1s;
 }
 
-.core:hover .ring-z {
+.core:hover .ring-z,
+.core:active .ring-z {
     animation-delay: 0.2s;
 }
 
-.core:hover .ring-xy {
+.core:hover .ring-xy,
+.core:active .ring-xy {
     animation-delay: 0.3s;
 }
 
-.core:hover .ring-yz {
+.core:hover .ring-yz,
+.core:active .ring-yz {
     animation-delay: 0.4s;
 }
 
-.core:hover .glow-center {
+.core:hover .glow-center,
+.core:active .glow-center {
     animation: center-pulse 0.8s infinite alternate ease-in-out;
 }
 
-.core:hover .core-face {
+.core:hover .core-face,
+.core:active .core-face {
     background: rgba(255, 0, 0, 0.25);
     border-color: rgba(255, 100, 100, 0.8);
     box-shadow: 0 0 25px rgba(255, 0, 0, 0.6), inset 0 0 25px rgba(255, 0, 0, 0.6);

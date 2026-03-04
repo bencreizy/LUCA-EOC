@@ -245,7 +245,7 @@ function CheckInSimulator() {
 
 export default function VerifyzProtocol() {
     return (
-        <div className="relative w-full h-full flex items-center justify-center overflow-hidden">
+        <div className="relative w-full h-full flex items-center justify-center overflow-y-auto overflow-x-hidden">
             <style>{`
         @keyframes fadeSlideUp {
           from { opacity: 0; transform: translateY(30px); }
@@ -267,19 +267,19 @@ export default function VerifyzProtocol() {
             <div className="absolute inset-0 pointer-events-none"
                 style={{ background: 'radial-gradient(ellipse at center, transparent 20%, rgba(0,0,0,0.80) 100%)' }} />
 
-            <div className="relative z-10 w-full max-w-5xl px-6 py-2 grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
+            <div className="relative z-10 w-full max-w-5xl px-4 md:px-6 py-2 grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6 items-center">
 
                 {/* Left: Text */}
-                <div className="space-y-8" style={{ animation: 'fadeSlideUp 1s ease both' }}>
+                <div className="space-y-6 md:space-y-8" style={{ animation: 'fadeSlideUp 1s ease both' }}>
                     <div>
                         <div className="text-xs text-blue-500/60 font-mono tracking-[0.4em] mb-3">// EOC :: LAYER-05</div>
-                        <h2 className="text-6xl font-black uppercase tracking-tight leading-none">
+                        <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tight leading-none">
                             <span style={{ color: '#3b82f6', textShadow: '0 0 40px rgba(59,130,246,0.6)' }}>VERIFYZ</span><br />
                             <span className="text-white/90">PROTOCOL</span>
                         </h2>
                     </div>
 
-                    <p className="text-white/70 leading-relaxed text-lg font-light border-l-2 border-blue-500/40 pl-4">
+                    <p className="text-white/70 leading-relaxed text-base md:text-lg font-light border-l-2 border-blue-500/40 pl-4">
                         A first-of-its-kind privacy web application enabling secure digital{' '}
                         <span className="text-blue-300 font-semibold">"check-ins"</span> across all industries
                         while keeping user identities{' '}
@@ -287,7 +287,7 @@ export default function VerifyzProtocol() {
                         Proof of Presence — without PII or GPS.
                     </p>
 
-                    <div className="bg-blue-950/20 border border-blue-500/10 rounded-xl p-6 backdrop-blur-sm"
+                    <div className="bg-blue-950/20 border border-blue-500/10 rounded-xl p-4 md:p-6 backdrop-blur-sm"
                         style={{ animation: 'pulseBlue 5s ease-in-out infinite' }}>
                         <h3 className="text-blue-300 text-xs font-mono tracking-[0.3em] uppercase mb-4">── THE STACK</h3>
                         <div className="space-y-3">

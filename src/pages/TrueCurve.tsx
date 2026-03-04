@@ -132,7 +132,7 @@ function PhiBar({ label, value, delay }: { label: string; value: number; delay: 
 
 export default function TrueCurve() {
     return (
-        <div className="relative w-full h-full flex items-center justify-center overflow-hidden">
+        <div className="relative w-full h-full flex items-center justify-center overflow-y-auto overflow-x-hidden">
             <style>{`
         @keyframes fadeSlideUp {
           from { opacity: 0; transform: translateY(30px); }
@@ -158,18 +158,18 @@ export default function TrueCurve() {
                 style={{ background: 'radial-gradient(ellipse at center, transparent 20%, rgba(0,0,0,0.7) 100%)' }} />
 
             {/* Content */}
-            <div className="relative z-10 w-full max-w-5xl px-6 py-2 grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
+            <div className="relative z-10 w-full max-w-5xl px-4 md:px-6 py-2 grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6 items-center">
 
                 {/* Left: Text */}
-                <div className="space-y-8" style={{ animation: 'fadeSlideUp 1s ease both' }}>
+                <div className="space-y-6 md:space-y-8" style={{ animation: 'fadeSlideUp 1s ease both' }}>
                     <div>
                         <div className="text-xs text-cyan-500/60 font-mono tracking-[0.4em] mb-3">// EOC :: LAYER-02</div>
-                        <h2 className="text-6xl font-black uppercase tracking-tight leading-none">
+                        <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tight leading-none">
                             <span style={{ color: '#06b6d4', textShadow: '0 0 40px rgba(6,182,212,0.6)' }}>PHLOEZ</span>
                         </h2>
                     </div>
 
-                    <p className="text-white/70 leading-relaxed text-lg font-light border-l-2 border-cyan-500/40 pl-4">
+                    <p className="text-white/70 leading-relaxed text-base md:text-lg font-light border-l-2 border-cyan-500/40 pl-4">
                         The structural foundation based on the perfect torus ratio. Every data point and
                         connection follows a{' '}
                         <span className="text-cyan-300 font-semibold">natural, resonant path</span>{' '}
@@ -177,7 +177,7 @@ export default function TrueCurve() {
                     </p>
 
                     {/* Phi ratios display */}
-                    <div className="bg-cyan-950/20 border border-cyan-500/10 rounded-xl p-6 backdrop-blur-sm space-y-4">
+                    <div className="bg-cyan-950/20 border border-cyan-500/10 rounded-xl p-4 md:p-6 backdrop-blur-sm space-y-4">
                         <h3 className="text-cyan-300 text-xs font-mono tracking-[0.3em] uppercase mb-4">── RESONANCE RATIOS</h3>
                         <PhiBar label="PHI ALIGNMENT" value={1.618} delay={0.2} />
                         <PhiBar label="TORUS RATIO" value={1.382} delay={0.4} />
@@ -185,7 +185,7 @@ export default function TrueCurve() {
                         <PhiBar label="SIGNAL COHERENCE" value={1.570} delay={0.8} />
                     </div>
 
-                    <div className="bg-cyan-950/20 border border-cyan-500/10 rounded-xl p-6 backdrop-blur-sm">
+                    <div className="bg-cyan-950/20 border border-cyan-500/10 rounded-xl p-4 md:p-6 backdrop-blur-sm">
                         <h3 className="text-cyan-300 text-xs font-mono tracking-[0.3em] uppercase mb-3">── IMPLICATIONS</h3>
                         <p className="text-white/60 text-sm leading-relaxed">
                             Software built on Phloez is inherently more stable and scalable. It reduces the
@@ -205,7 +205,7 @@ export default function TrueCurve() {
                 <div className="flex flex-col items-center gap-8" style={{ animation: 'fadeSlideUp 1.2s ease both' }}>
 
                     {/* Torus diagram */}
-                    <div className="relative w-64 h-64 flex items-center justify-center">
+                    <div className="relative w-48 h-48 md:w-64 md:h-64 flex items-center justify-center">
                         {/* Outer phi rings */}
                         {[0, 1, 2, 3].map(i => (
                             <div

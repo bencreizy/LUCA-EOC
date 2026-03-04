@@ -145,7 +145,7 @@ export default function OmegaKey() {
     }, []);
 
     return (
-        <div className="relative w-full h-full flex items-center justify-center overflow-hidden">
+        <div className="relative w-full h-full flex items-center justify-center overflow-y-auto overflow-x-hidden">
             <style>{`
         @keyframes hexFall {
           0% { transform: translateY(-100vh); }
@@ -179,15 +179,17 @@ export default function OmegaKey() {
                 style={{ background: 'radial-gradient(ellipse at center, transparent 30%, #000 100%)' }} />
 
             {/* Content */}
-            <div className="relative z-10 w-full max-w-5xl px-6 py-2 grid grid-cols-1 lg:grid-cols-2 gap-6 items-center"
+            <div className="relative z-10 w-full max-w-5xl px-4 md:px-6 py-2 grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6 items-center"
                 style={{ animation: 'fadeSlideUp 1s ease both' }}>
 
                 {/* Left: Visual */}
-                <div className="flex flex-col items-center gap-6">
-                    <RotatingKey />
+                <div className="flex flex-col items-center gap-4 md:gap-6">
+                    <div className="scale-75 md:scale-100">
+                        <RotatingKey />
+                    </div>
 
                     {/* Progress bar */}
-                    <div className="w-64">
+                    <div className="w-56 md:w-64">
                         <div className="flex justify-between text-xs text-purple-400/60 font-mono mb-1">
                             <span>GODLOCK INIT</span>
                             <span>{Math.floor(progress)}%</span>
@@ -205,7 +207,7 @@ export default function OmegaKey() {
                     </div>
 
                     {/* Cipher scrolling line */}
-                    <div className="w-64 overflow-hidden text-xs font-mono text-purple-500/50 whitespace-nowrap"
+                    <div className="w-56 md:w-64 overflow-hidden text-xs font-mono text-purple-500/50 whitespace-nowrap"
                         style={{ maskImage: 'linear-gradient(to right, transparent, white 20%, white 80%, transparent)' }}>
                         <div style={{ animation: 'hexFall 6s linear infinite', animationDirection: 'normal' }}>
                             {Array.from({ length: 64 }, () => HEX_CHARS[Math.floor(Math.random() * 16)]).join(' ')}
@@ -214,24 +216,24 @@ export default function OmegaKey() {
                 </div>
 
                 {/* Right: Text */}
-                <div className="space-y-8">
+                <div className="space-y-6 md:space-y-8">
                     <div>
                         <div className="text-xs text-purple-500/60 font-mono tracking-[0.4em] mb-3">// EOC :: LAYER-01</div>
-                        <h2 className="text-6xl font-black uppercase tracking-tight"
+                        <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tight"
                             style={{ color: '#a855f7', textShadow: '0 0 40px rgba(168,85,247,0.6)' }}>
                             <GlitchText text="OMEGA" /><br />
                             <span className="text-white/90">KEY</span>
                         </h2>
                     </div>
 
-                    <p className="text-white/70 leading-relaxed text-lg font-light border-l-2 border-purple-500/40 pl-4">
+                    <p className="text-white/70 leading-relaxed text-base md:text-lg font-light border-l-2 border-purple-500/40 pl-4">
                         The master encryption and security architecture. It acts as the{' '}
                         <span className="text-purple-300 font-semibold">"Godlock"</span> for the system —
                         ensuring access is absolute and un-hackable by standard logic.
                     </p>
 
-                    <div className="space-y-6">
-                        <div className="bg-purple-950/20 border border-purple-500/10 rounded-xl p-6 backdrop-blur-sm"
+                    <div className="space-y-4 md:space-y-6">
+                        <div className="bg-purple-950/20 border border-purple-500/10 rounded-xl p-4 md:p-6 backdrop-blur-sm"
                             style={{ animation: 'pulse-glow 4s ease-in-out infinite' }}>
                             <h3 className="text-purple-300 text-xs font-mono tracking-[0.3em] uppercase mb-3">── PURPOSE</h3>
                             <p className="text-white/60 text-sm leading-relaxed">
@@ -241,7 +243,7 @@ export default function OmegaKey() {
                             </p>
                         </div>
 
-                        <div className="bg-purple-950/20 border border-purple-500/10 rounded-xl p-6 backdrop-blur-sm">
+                        <div className="bg-purple-950/20 border border-purple-500/10 rounded-xl p-4 md:p-6 backdrop-blur-sm">
                             <h3 className="text-purple-300 text-xs font-mono tracking-[0.3em] uppercase mb-3">── IMPLICATIONS</h3>
                             <p className="text-white/60 text-sm leading-relaxed">
                                 From "reactive security" to{' '}
