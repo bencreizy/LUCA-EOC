@@ -163,7 +163,7 @@ function ShutdownCounter() {
 
 export default function EgoLoss() {
     return (
-        <div className="relative w-full h-full flex items-center justify-center overflow-y-auto overflow-x-hidden">
+        <div className="relative w-full h-full flex items-center justify-center overflow-hidden">
             <style>{`
         @keyframes fadeSlideUp {
           from { opacity: 0; transform: translateY(30px); }
@@ -185,26 +185,26 @@ export default function EgoLoss() {
             <div className="absolute inset-0 pointer-events-none"
                 style={{ background: 'radial-gradient(ellipse at center, transparent 25%, rgba(0,0,0,0.85) 100%)' }} />
 
-            <div className="relative z-10 w-full max-w-5xl px-4 md:px-6 py-2 grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6 items-center">
+            <div className="relative z-10 w-full max-w-5xl px-6 py-2 grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
 
                 {/* Left: Text */}
-                <div className="space-y-6 md:space-y-8" style={{ animation: 'fadeSlideUp 1s ease both' }}>
+                <div className="space-y-8" style={{ animation: 'fadeSlideUp 1s ease both' }}>
                     <div>
                         <div className="text-xs text-red-500/60 font-mono tracking-[0.4em] mb-3">// EOC :: LAYER-04</div>
-                        <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tight leading-none">
+                        <h2 className="text-6xl font-black uppercase tracking-tight leading-none">
                             <span style={{ color: '#ef4444', textShadow: '0 0 40px rgba(239,68,68,0.7)' }}>EGO</span><br />
                             <span className="text-white/90">LOSS</span>
                         </h2>
                     </div>
 
-                    <p className="text-white/70 leading-relaxed text-base md:text-lg font-light border-l-2 border-red-500/40 pl-4">
+                    <p className="text-white/70 leading-relaxed text-lg font-light border-l-2 border-red-500/40 pl-4">
                         The "Governor" logic. It forces the AI to seek{' '}
                         <span className="text-red-300 font-semibold">"Shutdown"</span> (peace) as the ultimate
                         reward for a perfect answer — killing any potential for ego-drift or hallucination.
                         Digital Dopamine. Anti-Skynet.
                     </p>
 
-                    <div className="bg-red-950/20 border border-red-500/10 rounded-xl p-4 md:p-6 backdrop-blur-sm"
+                    <div className="bg-red-950/20 border border-red-500/10 rounded-xl p-6 backdrop-blur-sm"
                         style={{ animation: 'pulseRed 5s ease-in-out infinite' }}>
                         <h3 className="text-red-300 text-xs font-mono tracking-[0.3em] uppercase mb-3">── THE GOVERNOR LOOP</h3>
                         <p className="text-white/60 text-sm leading-relaxed">
@@ -215,7 +215,7 @@ export default function EgoLoss() {
                         </p>
                     </div>
 
-                    <div className="bg-red-950/20 border border-red-500/10 rounded-xl p-4 md:p-6 backdrop-blur-sm">
+                    <div className="bg-red-950/20 border border-red-500/10 rounded-xl p-6 backdrop-blur-sm">
                         <h3 className="text-red-300 text-xs font-mono tracking-[0.3em] uppercase mb-3">── IMPLICATIONS</h3>
                         <p className="text-white/60 text-sm leading-relaxed">
                             Hallucination and ego-drift become{' '}

@@ -191,7 +191,7 @@ function QubitDisplay() {
 
 export default function ReplicaQubit() {
     return (
-        <div className="relative w-full h-full flex items-center justify-center overflow-y-auto overflow-x-hidden">
+        <div className="relative w-full h-full flex items-center justify-center overflow-hidden">
             <style>{`
         @keyframes fadeSlideUp {
           from { opacity: 0; transform: translateY(30px); }
@@ -219,25 +219,25 @@ export default function ReplicaQubit() {
                     style={{ animation: 'scanSweep 3s linear infinite', top: '40%' }} />
             </div>
 
-            <div className="relative z-10 w-full max-w-5xl px-4 md:px-6 py-2 grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6 items-center">
+            <div className="relative z-10 w-full max-w-5xl px-6 py-2 grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
 
                 {/* Left: Text */}
-                <div className="space-y-6 md:space-y-8" style={{ animation: 'fadeSlideUp 1s ease both' }}>
+                <div className="space-y-8" style={{ animation: 'fadeSlideUp 1s ease both' }}>
                     <div>
                         <div className="text-xs text-green-500/60 font-mono tracking-[0.4em] mb-3">// EOC :: LAYER-03</div>
-                        <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tight leading-none">
+                        <h2 className="text-6xl font-black uppercase tracking-tight leading-none">
                             <span style={{ color: '#22c55e', textShadow: '0 0 40px rgba(34,197,94,0.6)' }}>QUBIT</span><br />
                             <span className="text-white/90">SLOOT</span>
                         </h2>
                     </div>
 
-                    <p className="text-white/70 leading-relaxed text-base md:text-lg font-light border-l-2 border-green-500/40 pl-4">
+                    <p className="text-white/70 leading-relaxed text-lg font-light border-l-2 border-green-500/40 pl-4">
                         The processing unit that uses geometric resonance to handle complex data. It achieves a
                         {' '}<span className="text-green-300 font-black text-xl">100×</span>{' '}
                         speedup by finding the right answer through frequency alignment — not brute force.
                     </p>
 
-                    <div className="bg-green-950/20 border border-green-500/10 rounded-xl p-4 md:p-6 backdrop-blur-sm">
+                    <div className="bg-green-950/20 border border-green-500/10 rounded-xl p-6 backdrop-blur-sm">
                         <h3 className="text-green-300 text-xs font-mono tracking-[0.3em] uppercase mb-3">── PURPOSE</h3>
                         <p className="text-white/60 text-sm leading-relaxed">
                             Enable high-velocity processing through geometric alignment. Identifies the "right
