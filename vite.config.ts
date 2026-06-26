@@ -11,12 +11,5 @@ export default defineConfig({
   },
   build: {
     outDir: 'dist',
-    sourcemap: false,
-    rollupOptions: {
-      input: {
-        main: path.resolve(__dirname, 'index.html'),
-        agents: path.resolve(__dirname, 'src/agents/index.ts')
-      }
-    }
   },
 });
