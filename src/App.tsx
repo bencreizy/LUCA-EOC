@@ -60,7 +60,7 @@ function Layout({ children }: { children: React.ReactNode }) {
 
       {/* Moon image: Left center, above red planet, moved up and to the right slightly */}
       <img
-        src="https://raw.githubusercontent.com/bencreizy/Seven-/main/moon_eoc.png"
+        src="/eoc-moon.png"
         alt="Moon"
         className="absolute z-20 pointer-events-none w-40 object-contain animate-float"
         style={{ bottom: '70vmin', left: '260px' }}
@@ -96,7 +96,7 @@ function Home() {
         style={{ top: '-110px' }}
       >
         <img
-          src="https://raw.githubusercontent.com/bencreizy/Seven-/main/eoc.png"
+          src="/eoc.png"
           alt="End of Computation"
           className="opacity-90 transition-opacity duration-1000"
           style={{

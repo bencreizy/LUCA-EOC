@@ -19,7 +19,7 @@ export function InteractiveNebulaShader({
   className = "",
 }: InteractiveNebulaShaderProps) {
   const containerRef = useRef<HTMLDivElement>(null);
-  const materialRef = useRef<THREE.ShaderMaterial>(null);
+  const materialRef = useRef<THREE.ShaderMaterial | null>(null);
 
   // Sync props into uniforms
   useEffect(() => {
@@ -133,7 +133,6 @@ export function InteractiveNebulaShader({
       transparent: true,
       blending: THREE.AdditiveBlending
     });
-    // @ts-ignore
     materialRef.current = material;
     const mesh = new THREE.Mesh(new THREE.PlaneGeometry(2, 2), material);
     scene.add(mesh);
