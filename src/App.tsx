@@ -58,14 +58,6 @@ function Layout({ children }: { children: React.ReactNode }) {
         style={{ top: '15vmin', right: '35vmin' }}
       />
 
-      {/* Moon image: Left center, above red planet, moved up and to the right slightly */}
-      <img
-        src="/eoc-moon.png"
-        alt="Moon"
-        className="absolute z-20 pointer-events-none w-40 object-contain animate-float"
-        style={{ bottom: '70vmin', left: '260px' }}
-      />
-
       {/* Foreground UI Layer */}
       <div className="relative z-30 w-full h-full min-h-screen flex flex-col pointer-events-auto">
         {/* Navigation */}
@@ -90,14 +82,32 @@ function Layout({ children }: { children: React.ReactNode }) {
 function Home() {
   return (
     <div className="w-full h-full relative flex items-center justify-center">
-      {/* EOC Logo — Enlarged 3x and shifted very high */}
-      <div
-        className="absolute left-0 right-0 flex justify-center pointer-events-none select-none z-50"
-        style={{ top: '-110px' }}
-      >
-        <img
-          src="/eoc.png"
-          alt="End of Computation"
+      {/* Tesseract centered and reduced in size by 25% */}
+      <div className="relative flex items-center justify-center overflow-visible scale-[0.75]">
+        <Tesseract />
+      </div>
+    </div>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <Layout>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/omega-key" element={<OmegaKey />} />
+          <Route path="/true-curve" element={<TrueCurve />} />
+          <Route path="/replica-qubit" element={<ReplicaQubit />} />
+          <Route path="/ego-loss" element={<EgoLoss />} />
+          <Route path="/verifyz" element={<VerifyzProtocol />} />
+        </Routes>
+      </Layout>
+    </Router>
+  );
+}
+
+export default App;
           className="opacity-90 transition-opacity duration-1000"
           style={{
             width: '285%',
